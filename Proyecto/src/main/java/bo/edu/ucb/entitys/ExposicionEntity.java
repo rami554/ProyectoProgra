@@ -6,7 +6,6 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "exposicion", schema = "public", catalog = "galeriart")
-@IdClass(ExposicionEntityPK.class)
 public class ExposicionEntity {
     private int idExposicion;
     private String titulo;
