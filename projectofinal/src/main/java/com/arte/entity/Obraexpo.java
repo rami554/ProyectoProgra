@@ -12,7 +12,17 @@ import java.util.Objects;
 public class Obraexpo {
     private int idObraexpo;
 
-    @Id
+    public Obraexpo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Obraexpo(int idObraexpo) {
+		super();
+		this.idObraexpo = idObraexpo;
+	}
+
+	@Id
     @Column(name = "id_obraexpo")
     public int getIdObraexpo() {
         return idObraexpo;
