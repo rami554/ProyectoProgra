@@ -1,86 +1,72 @@
 package com.arte.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import java.util.Objects;
-
 @Entity
 @Table(name="obra",schema="public")
 public class Obra {
+	
+	@Id
     private int idObra;
     private String titulo;
     private String estilo;
     private float precio;
     private int idArtista;
 
-    @Id
-    @Column(name = "id_obra")
-    public int getIdObra() {
-        return idObra;
-    }
+    public Obra() {
+		super();
+	}
 
-    public void setIdObra(int idObra) {
-        this.idObra = idObra;
-    }
+	public Obra(int idObra, String titulo, String estilo, float precio, int idArtista) {
+		super();
+		this.idObra = idObra;
+		this.titulo = titulo;
+		this.estilo = estilo;
+		this.precio = precio;
+		this.idArtista = idArtista;
+	}
 
-    @Basic
-    @Column(name = "titulo")
-    public String getTitulo() {
-        return titulo;
-    }
+	public int getIdObra() {
+		return idObra;
+	}
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+	public void setIdObra(int idObra) {
+		this.idObra = idObra;
+	}
 
-    @Basic
-    @Column(name = "estilo")
-    public String getEstilo() {
-        return estilo;
-    }
+	public String getTitulo() {
+		return titulo;
+	}
 
-    public void setEstilo(String estilo) {
-        this.estilo = estilo;
-    }
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
-    @Basic
-    @Column(name = "precio")
-    public float getPrecio() {
-        return precio;
-    }
+	public String getEstilo() {
+		return estilo;
+	}
 
-    public void setPrecio(float precio) {
-        this.precio = precio;
-    }
+	public void setEstilo(String estilo) {
+		this.estilo = estilo;
+	}
 
-    @Basic
-    @Column(name = "id_artista")
-    public int getIdArtista() {
-        return idArtista;
-    }
+	public float getPrecio() {
+		return precio;
+	}
 
-    public void setIdArtista(int idArtista) {
-        this.idArtista = idArtista;
-    }
+	public void setPrecio(float precio) {
+		this.precio = precio;
+	}
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Obra obra = (Obra) o;
-        return idObra == obra.idObra &&
-                Float.compare(obra.precio, precio) == 0 &&
-                idArtista == obra.idArtista &&
-                Objects.equals(titulo, obra.titulo) &&
-                Objects.equals(estilo, obra.estilo);
-    }
+	public int getIdArtista() {
+		return idArtista;
+	}
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(idObra, titulo, estilo, precio, idArtista);
-    }
+	public void setIdArtista(int idArtista) {
+		this.idArtista = idArtista;
+	}
+    
+   
 }

@@ -1,18 +1,17 @@
 package com.arte.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import java.sql.Date;
-import java.util.Objects;
-
 @Entity
 @Table(name="exposicion",schema="public")
 public class Exposicion {
-    private int idExposicion;
+    
+	@Id
+	private int idExposicion;
     private String titulo;
     private String descripcion;
     private Date fechainauguracion;
@@ -20,104 +19,89 @@ public class Exposicion {
     private String salon1;
     private String salon2;
     private String salon3;
+    
+    public Exposicion() {
+		super();
+	}
 
-    @Id
-    @Column(name = "id_exposicion")
-    public int getIdExposicion() {
-        return idExposicion;
-    }
+	public Exposicion(int idExposicion, String titulo, String descripcion, Date fechainauguracion, Date fechaclausura, String salon1, String salon2, String salon3) {
+		super();
+		this.idExposicion = idExposicion;
+		this.titulo = titulo;
+		this.descripcion = descripcion;
+		this.fechainauguracion = fechainauguracion;
+		this.fechaclausura = fechaclausura;
+		this.salon1 = salon1;
+		this.salon2 = salon2;
+		this.salon3 = salon3;
 
-    public void setIdExposicion(int idExposicion) {
-        this.idExposicion = idExposicion;
-    }
+	}
 
-    @Basic
-    @Column(name = "titulo")
-    public String getTitulo() {
-        return titulo;
-    }
+	public int getIdExposicion() {
+		return idExposicion;
+	}
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+	public void setIdExposicion(int idExposicion) {
+		this.idExposicion = idExposicion;
+	}
 
-    @Basic
-    @Column(name = "descripcion")
-    public String getDescripcion() {
-        return descripcion;
-    }
+	public String getTitulo() {
+		return titulo;
+	}
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
-    @Id
-    @Column(name = "fechainauguracion")
-    public Date getFechainauguracion() {
-        return fechainauguracion;
-    }
+	public String getDescripcion() {
+		return descripcion;
+	}
 
-    public void setFechainauguracion(Date fechainauguracion) {
-        this.fechainauguracion = fechainauguracion;
-    }
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
-    @Basic
-    @Column(name = "fechaclausura")
-    public Date getFechaclausura() {
-        return fechaclausura;
-    }
+	public Date getFechainauguracion() {
+		return fechainauguracion;
+	}
 
-    public void setFechaclausura(Date fechaclausura) {
-        this.fechaclausura = fechaclausura;
-    }
+	public void setFechainauguracion(Date fechainauguracion) {
+		this.fechainauguracion = fechainauguracion;
+	}
 
-    @Id
-    @Column(name = "salon1")
-    public String getSalon1() {
-        return salon1;
-    }
+	public Date getFechaclausura() {
+		return fechaclausura;
+	}
 
-    public void setSalon1(String salon1) {
-        this.salon1 = salon1;
-    }
+	public void setFechaclausura(Date fechaclausura) {
+		this.fechaclausura = fechaclausura;
+	}
 
-    @Id
-    @Column(name = "salon2")
-    public String getSalon2() {
-        return salon2;
-    }
+	public String getSalon1() {
+		return salon1;
+	}
 
-    public void setSalon2(String salon2) {
-        this.salon2 = salon2;
-    }
+	public void setSalon1(String salon1) {
+		this.salon1 = salon1;
+	}
 
-    @Id
-    @Column(name = "salon3")
-    public String getSalon3() {
-        return salon3;
-    }
+	public String getSalon2() {
+		return salon2;
+	}
 
-    public void setSalon3(String salon3) {
-        this.salon3 = salon3;
-    }
+	public void setSalon2(String salon2) {
+		this.salon2 = salon2;
+	}
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Exposicion that = (Exposicion) o;
-        return idExposicion == that.idExposicion &&
-                Objects.equals(titulo, that.titulo) &&
-                Objects.equals(descripcion, that.descripcion) &&
-                Objects.equals(fechainauguracion, that.fechainauguracion) &&
-                Objects.equals(fechaclausura, that.fechaclausura) &&
-                Objects.equals(salon1, that.salon1) &&
-                Objects.equals(salon2, that.salon2) &&
-                Objects.equals(salon3, that.salon3);
-    }
+	public String getSalon3() {
+		return salon3;
+	}
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(idExposicion, titulo, descripcion, fechainauguracion, fechaclausura, salon1, salon2, salon3);
-    }
+	public void setSalon3(String salon3) {
+		this.salon3 = salon3;
+	}
+	
 }
+
+
+    
