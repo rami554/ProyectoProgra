@@ -21,12 +21,6 @@ public class Exposicion {
     private String salon2;
     private String salon3;
 
-    
-    public Exposicion() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 	@Id
     @Column(name = "id_exposicion")
     public int getIdExposicion() {
