@@ -4,10 +4,13 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
 import java.sql.Date;
 import java.util.Objects;
 
 @Entity
+@Table(name="venta",schema="public")
 public class Venta {
     private int idVenta;
     private Date fechaventa;
