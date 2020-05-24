@@ -19,7 +19,24 @@ public class Persona {
     private String ciudad;
     private String profesion;
 
-    @Id
+    public Persona() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Persona(int idPersona, String nombre, String apellido, int celular, String pais, String ciudad,
+			String profesion) {
+		super();
+		this.idPersona = idPersona;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.celular = celular;
+		this.pais = pais;
+		this.ciudad = ciudad;
+		this.profesion = profesion;
+	}
+
+	@Id
     @Column(name = "id_persona")
     public int getIdPersona() {
         return idPersona;

@@ -15,7 +15,18 @@ public class Venta {
     private int idVenta;
     private Date fechaventa;
 
-    @Id
+    public Venta() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Venta(int idVenta, Date fechaventa) {
+		super();
+		this.idVenta = idVenta;
+		this.fechaventa = fechaventa;
+	}
+
+	@Id
     @Column(name = "id_venta")
     public int getIdVenta() {
         return idVenta;
