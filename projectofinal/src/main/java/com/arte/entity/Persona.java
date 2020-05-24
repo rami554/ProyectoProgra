@@ -16,7 +16,12 @@ import javax.persistence.Version;
 @Entity(name="persona")
 public class Persona implements Serializable {
 
-    /** Primary key. */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/** Primary key. */
     protected static final String PK = "idPersona";
 
     /**
