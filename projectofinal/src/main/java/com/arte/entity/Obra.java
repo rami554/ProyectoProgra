@@ -17,30 +17,8 @@ public class Obra {
 
     public Obra() {
 		super();
-<<<<<<< HEAD
 	}
-=======
-		// TODO Auto-generated constructor stub
-	}
-    
-
-	public Obra(int idObra, String titulo, String estilo, float precio, int idArtista) {
-		super();
-		this.idObra = idObra;
-		this.titulo = titulo;
-		this.estilo = estilo;
-		this.precio = precio;
-		this.idArtista = idArtista;
-	}
-
-
-	@Id
-    @Column(name = "id_obra")
-    public int getIdObra() {
-        return idObra;
-    }
->>>>>>> 9f8577523b39b4c3524e34ff6cdc37cfa5193836
-
+   
 	public Obra(int idObra, String titulo, String estilo, float precio, int idArtista) {
 		super();
 		this.idObra = idObra;
@@ -90,5 +68,4 @@ public class Obra {
 		this.idArtista = idArtista;
 	}
     
-   
 }
