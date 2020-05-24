@@ -19,8 +19,8 @@ public class Obra {
 =======
     public Obra() {
 		super();
-<<<<<<< HEAD
 	}
+<<<<<<< HEAD
 =======
 		// TODO Auto-generated constructor stub
 	}
@@ -44,6 +44,9 @@ public class Obra {
     }
 >>>>>>> 9f8577523b39b4c3524e34ff6cdc37cfa5193836
 
+=======
+   
+>>>>>>> 7187d78430895a6203f0a8ee1d2448b6b5bd4ff2
 	public Obra(int idObra, String titulo, String estilo, float precio, int idArtista) {
 		super();
 		this.idObra = idObra;
@@ -93,5 +96,4 @@ public class Obra {
 		this.idArtista = idArtista;
 	}
     
-   
 }

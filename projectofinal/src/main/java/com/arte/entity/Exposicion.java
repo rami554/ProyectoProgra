@@ -19,7 +19,6 @@ public class Exposicion {
     private String salon1;
     private String salon2;
     private String salon3;
-<<<<<<< HEAD
     
     public Exposicion() {
 		super();
@@ -102,6 +101,7 @@ public class Exposicion {
 		this.salon3 = salon3;
 	}
 	
+<<<<<<< HEAD
 =======
 
 	@Id
@@ -204,6 +204,8 @@ public class Exposicion {
         return Objects.hash(idExposicion, titulo, descripcion, fechainauguracion, fechaclausura, salon1, salon2, salon3);
     }
 >>>>>>> 9f8577523b39b4c3524e34ff6cdc37cfa5193836
+=======
+>>>>>>> 7187d78430895a6203f0a8ee1d2448b6b5bd4ff2
 }
 
 
