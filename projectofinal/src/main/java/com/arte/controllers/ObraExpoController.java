@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.arte.entity.Obraexpo;
-import com.arte.service.ObraExpoService;
+import com.arte.services.ObraExpoService;
 
 @RestController
 @RequestMapping("/ObraExpo")

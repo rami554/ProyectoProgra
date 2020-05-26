@@ -1,6 +1,6 @@
 package com.arte.controllers;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.arte.service.ExposicionService;
+import com.arte.services.ExposicionService;
 import com.arte.entity.Exposicion;;
 
 @RestController
@@ -27,7 +27,7 @@ public class ExposicionController {
 	private ExposicionService exposicionService;
 	
 	@GetMapping
-	public ArrayList<Exposicion> ListarTodos () {
+	public List<Exposicion> ListarTodos () {
 		return exposicionService.BuscarTodos();
 	}
 	
@@ -47,8 +47,7 @@ public class ExposicionController {
 	}
 	
 	@PutMapping("/{idExposicion}")
-	public Exposicion ActualizarUno (@RequestBody Exposicion entidadExposicion,
-									  @PathVariable int idExposicion) {
+	public Exposicion ActualizarUno (@RequestBody Exposicion entidadExposicion,@PathVariable int idExposicion) {
 		return exposicionService.ActualizarUno(idExposicion, entidadExposicion);
 	}
 
