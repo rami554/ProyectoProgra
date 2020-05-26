@@ -13,19 +13,22 @@ public class Obra {
     private String titulo;
     private String estilo;
     private float precio;
-    private int idArtista;
+    private int idPropietario;
+    private int idArtista;    
 
     public Obra() {
 		super();
 	}
 
-	public Obra(int idObra, String titulo, String estilo, float precio, int idArtista) {
+	public Obra(int idObra, String titulo, String estilo, float precio,int idPropietario, int idArtista) {
 		super();
 		this.idObra = idObra;
 		this.titulo = titulo;
 		this.estilo = estilo;
 		this.precio = precio;
 		this.idArtista = idArtista;
+		this.idPropietario = idPropietario;
+		
 	}
 
 	public int getIdObra() {
@@ -60,6 +63,14 @@ public class Obra {
 		this.precio = precio;
 	}
 
+	public int getIdPropietario() {
+		return idPropietario;
+	}
+
+	public void setIdPropietario(int idPropietario) {
+		this.idPropietario = idPropietario;
+	}
+	
 	public int getIdArtista() {
 		return idArtista;
 	}
@@ -67,5 +78,7 @@ public class Obra {
 	public void setIdArtista(int idArtista) {
 		this.idArtista = idArtista;
 	}
+	
+	
     
 }

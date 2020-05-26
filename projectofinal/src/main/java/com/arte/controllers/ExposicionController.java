@@ -1,6 +1,6 @@
 package com.arte.controllers;
 
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +26,8 @@ public class ExposicionController {
 	@Autowired
 	private ExposicionService exposicionService;
 	
-	@GetMapping
-	public List<Exposicion> ListarTodos () {
+	@GetMapping()
+	public ArrayList<Exposicion> ListarTodos () {
 		return exposicionService.BuscarTodos();
 	}
 	
