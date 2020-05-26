@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.arte.entity.Venta;
-import com.arte.services.VentaService;
+import com.arte.service.VentaService;
 
 @RestController
 @RequestMapping("/Venta")
