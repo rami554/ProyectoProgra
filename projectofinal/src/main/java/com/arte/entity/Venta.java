@@ -11,17 +11,37 @@ import java.sql.Date;
 public class Venta {
 	@Id
     private int idVenta;
+    private int idObra;
     private Date fechaventa;
+    private int idCliente;
 
     public Venta() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Venta(int idVenta, Date fechaventa) {
+	public Venta(int idVenta, int idObra, Date fechaventa, int idCliente) {
 		super();
 		this.idVenta = idVenta;
+		this.idObra = idObra;
 		this.fechaventa = fechaventa;
+		this.idCliente = idCliente;
+	}
+
+	public int getIdObra() {
+		return idObra;
+	}
+
+	public void setIdObra(int idObra) {
+		this.idObra = idObra;
+	}
+
+	public int getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
 	}
 
 	public int getIdVenta() {
