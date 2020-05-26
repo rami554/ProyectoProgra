@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "19c63494-8c39-4e2f-80bf-559662bdde06",
+		"name": "Exposiciones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/Exposicion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Exposicion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Exposicion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/Exposicion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idExposicion\": 3,\n    \"titulo\": \"Nueva Arte\",\n    \"descripcion\": \"Arte del 2020\",\n    \"fechainauguracion\": \"2015-05-05\",\n    \"fechaclausura\": \"2015-05-30\",\n    \"salon1\": \"si\",\n    \"salon2\": \"no\",\n    \"salon3\": \"no\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/Exposicion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Exposicion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/Exposicion/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Exposicion/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Exposicion",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/Exposicion/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idExposicion\": 2,\n    \"titulo\": \"Nueva Arte\",\n    \"descripcion\": \"Arte del 2020\",\n    \"fechainauguracion\": \"2015-05-05\",\n    \"fechaclausura\": \"2015-05-30\",\n    \"salon1\": \"si\",\n    \"salon2\": \"no\",\n    \"salon3\": \"no\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/Exposicion/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Exposicion",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

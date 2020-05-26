@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "289a7f30-47e2-4ffe-8a4f-80947a1788e4",
+		"name": "Obra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/Obra",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Obra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Obra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/Obra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idObra\": 4,\n    \"titulo\": \"El soleado\",\n    \"estilo\": \"Cubismo\",\n    \"precio\": 30000.6,\n    \"idPropietario\": 2,\n    \"idArtista\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/Obra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Obra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/Obra/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Obra/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Obra",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/Obra/4",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idObra\": 4,\n    \"titulo\": \"La Luna\",\n    \"estilo\": \"Natural\",\n    \"precio\": 2500,\n    \"idPropietario\": 2,\n    \"idArtista\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/Obra/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Obra",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

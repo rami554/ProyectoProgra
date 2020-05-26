@@ -7,12 +7,15 @@ import org.springframework.stereotype.Service;
 
 import com.arte.repository.ExposicionRepository;
 import com.arte.entity.Exposicion;
+import com.arte.entity.Obraexpo;
+import com.arte.repository.ObraExpoRepository;
 
 
 @Service
 public class ExposicionService {
 	@Autowired
 	private ExposicionRepository exposicionRepository;
+	private ObraExpoRepository obraExpoRepository;
 	
 	public ArrayList<Exposicion> BuscarTodos () {
 		return (ArrayList<Exposicion>) exposicionRepository.findAll();
@@ -41,15 +44,20 @@ public class ExposicionService {
 		return ExposicionRetorna;
 	}
 	
-//	public String ConfirmarBorrado (int idExposicion) {
-//		Optional<Exposicion> p = exposicionRepository.findById(idExposicion);
-//		if (p.get().getTipocli().toString().toLowerCase().equals("malo") ) {
-//			exposicionRepository.deleteById(idExposicion);
-//			return String.valueOf("La exposicion se borro");
-//		}else {
-//			
-//			return String.valueOf("La exposicion no se puede borrar");
-//		}
-//	}
+	public String ConfirmarBorrado (int idExposicion) {
+		Optional<Exposicion> p = exposicionRepository.findById(idExposicion);
+		Optional<Obraexpo> 	q= obraExpoRepository.findAll(idExposicion);
+		if (q.isPresent() ) {
+			return String.valueOf("La exposicion no se puede borrar porque existe el dato en expoobra ");
+		}else {
+			exposicionRepository.deleteById(idExposicion);
+			return String.valueOf("La exposicion se borro");
+		}
+	}
 
 }
+
+
+
+//Primero se debe borrar en obraexpo para borrar en la exposicion y la obra
+//Si quieres borrar una persona primero debes borrar la obra que hizo o la obra que es de su propiedad 

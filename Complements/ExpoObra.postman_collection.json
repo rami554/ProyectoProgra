@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "26cd7d2c-dadb-421f-bacc-928dafb8c50b",
+		"name": "ExpoObra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/ObraExpo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/ObraExpo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"ObraExpo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/ObraExpo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_obraexpo\": 3,\n    \"id_obra\": 4,\n    \"id_exposicion\": 3,\n    \"exposicion_fechainauguracion\": \"2015-05-05\",\n    \"exposicion_salon1\": \"no\",\n    \"exposicion_salon2\": \"no\",\n    \"exposicion_salon3\": \"si\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/ObraExpo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"ObraExpo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/ObraExpo/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/ObraExpo/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"ObraExpo",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/ObraExpo/3",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id_obraexpo\": 3,\n    \"id_obra\": 2,\n    \"id_exposicion\": 3,\n    \"exposicion_fechainauguracion\": \"2015-05-05\",\n    \"exposicion_salon1\": \"no\",\n    \"exposicion_salon2\": \"no\",\n    \"exposicion_salon3\": \"si\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/ObraExpo/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"ObraExpo",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
