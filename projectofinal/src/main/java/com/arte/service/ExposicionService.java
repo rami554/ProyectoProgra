@@ -7,15 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.arte.repository.ExposicionRepository;
 import com.arte.entity.Exposicion;
-import com.arte.entity.Obraexpo;
-import com.arte.repository.ObraExpoRepository;
-
 
 @Service
 public class ExposicionService {
 	@Autowired
 	private ExposicionRepository exposicionRepository;
-	private ObraExpoRepository obraExpoRepository;
 	
 	public ArrayList<Exposicion> BuscarTodos () {
 		return (ArrayList<Exposicion>) exposicionRepository.findAll();
@@ -30,7 +26,12 @@ public class ExposicionService {
 	}
 	
 	public void EliminarUno (int idExposicion) {
-		exposicionRepository.deleteById(idExposicion);
+		try {
+			exposicionRepository.deleteById(idExposicion);
+			}catch (Exception e) {
+				System.out.println("La Expocion tiene obras en la sala");
+			}
+		
 	}
 	
 	public Exposicion ActualizarUno (int idExposicion, Exposicion ExposicionActualizar) {
@@ -44,16 +45,16 @@ public class ExposicionService {
 		return ExposicionRetorna;
 	}
 	
-	public String ConfirmarBorrado (int idExposicion) {
-		Optional<Exposicion> p = exposicionRepository.findById(idExposicion);
-		Optional<Obraexpo> 	q= obraExpoRepository.findAll(idExposicion);
-		if (q.isPresent() ) {
-			return String.valueOf("La exposicion no se puede borrar porque existe el dato en expoobra ");
-		}else {
-			exposicionRepository.deleteById(idExposicion);
-			return String.valueOf("La exposicion se borro");
-		}
-	}
+	/*public void ConfirmarBorrado (int idExposicion) {
+		obraExpoRepository.findAll();
+		
+		/*for(int i = 0 ; i < p.size();i++) {
+            if(p.get(i).getId_exposicion() == 1) {
+            	System.out.println(p.get(i).getId_exposicion());
+            } else {
+            	System.out.println(p.get(i).getId_exposicion());    
+            }
+        }*/
 
 }
 

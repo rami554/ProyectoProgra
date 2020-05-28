@@ -1,7 +1,9 @@
 package com.arte.service;
 
+
 import java.util.ArrayList;
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,9 +29,15 @@ public class ObraService {
 		return obraRepository.save(Obra);
 	}
 	
+		
 	public void EliminarUno (int idObra) {
-		obraRepository.deleteById(idObra);
+		try {
+			obraRepository.deleteById(idObra);
+			}catch (Exception e) {
+				System.out.println("La Obra Existe en una una expocicion");
+			}
 	}
+	
 	
 	public Obra ActualizarUno (int idObra, Obra ObraActualizar) {
 		Obra ObraRetorna = new Obra();

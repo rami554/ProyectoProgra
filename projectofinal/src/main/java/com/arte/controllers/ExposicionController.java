@@ -51,8 +51,8 @@ public class ExposicionController {
 		return exposicionService.ActualizarUno(idExposicion, entidadExposicion);
 	}
 
-	@DeleteMapping("/filtro/{idExposicion}")
+	/*@DeleteMapping("/filtro/{idExposicion}")
 	public void ConfirmarBorrado (@PathVariable int idExposicion) {
 		exposicionService.ConfirmarBorrado(idExposicion);
-	}
+	}*/
 }
