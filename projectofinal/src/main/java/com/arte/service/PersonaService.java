@@ -30,7 +30,11 @@ public class PersonaService {
 	}
 	
 	public void EliminarUno (int idPersona) {
-		personaRepository.deleteById(idPersona);
+		try {
+		personaRepository.deleteById(idPersona);}
+		catch(Exception e) {
+			System.out.println("No se puede borrar a la persona porque esta registrado en ventas");
+		}
 	}
 	
 	public Persona ActualizarUno (int idPersona, Persona PersonaActualizar) {
