@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.arte.repository.ExposicionRepository;
+
+import net.minidev.json.JSONObject;
+
 import com.arte.entity.Exposicion;
 
 @Service
@@ -21,8 +24,19 @@ public class ExposicionService {
 		return exposicionRepository.findById(idExposicion);
 	}
 	
-	public Exposicion Guardar (Exposicion Exposicion) {
-		return exposicionRepository.save(Exposicion);
+	public Exposicion Guardar (Exposicion idExposicion) {
+		ArrayList<Exposicion> p = (ArrayList<com.arte.entity.Exposicion>) exposicionRepository.findAll();
+		for (int i=0; i<=p.size();i++) {
+			System.out.println(i);
+			if(p.get(i).getFechainauguracion().compareTo((idExposicion.getFechainauguracion()))!=0){
+				System.out.println("son iguales");
+				return exposicionRepository.save(idExposicion);
+			} else {
+				System.out.println("son distintas");
+				continue;
+			}
+		}
+		return idExposicion;
 	}
 	
 	public void EliminarUno (int idExposicion) {
